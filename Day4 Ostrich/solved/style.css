@@ -1,0 +1,77 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  background-color:#DDE1D4;
+  padding:15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin:0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+div{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 72px;
+  font-weight: 600;
+}
+
+
+.box:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-color: lightgray;
+  color: red;
+}
+
+.box:nth-child(2) {
+  grid-column: 3 / span 2;
+  grid-row: span 2;
+  background-color: darkgreen;
+  color: white;
+}
+
+.box:nth-child(3) {
+  grid-column: span 2;
+  grid-row: 3 / span 2;
+  background-color: red;
+  color: white;
+}
+
+.box:last-child {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.box:last-child div {
+  font-size: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.box:last-child div:first-child {
+  background-color: pink;
+  color: red;
+}
+
+.box:last-child div:nth-child(2) {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.box:last-child div:nth-child(3) {
+  background-color: coral;
+  color: red;
+}
+
+.box:last-child div:last-child {
+  background-color: crimson;
+  color: white;
+}
